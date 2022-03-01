@@ -36,7 +36,7 @@ jobs:
           
       - name: Deploy unit/integration test
         run: |
-          dbx deploy --jobs=cicd-azdevops-scala-notebook-test --files-only    
+          dbx deploy --jobs=cicd-azdevops-scala-notebook-test --files-only --no-rebuild    
 
       - name: Run unit/integration test
         run: |
