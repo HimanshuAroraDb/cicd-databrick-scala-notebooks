@@ -30,10 +30,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
 
-      - name: Install dependencies and project in dev mode
+      - name: Install dbx
         run: |
-          pip install -r cicd-requirements.txt
-          pip install -e .
+          pip install dbx
+          
+      - name: Deploy unit/integration test
+        run: |
+          dbx deploy --jobs=cicd-azdevops-scala-notebook-test --files-only    
 
       - name: Run unit/integration test
         run: |
