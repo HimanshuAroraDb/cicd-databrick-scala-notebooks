@@ -22,7 +22,7 @@
                 },
                 "max_retries": 0,
                 "notebook_task": {
-                    "notebook_path": "tests/TransformationsTest"
+                    "notebook_path": "/tests/TransformationsTest"
                 }
             }
         ]
