@@ -1,0 +1,30 @@
+{
+    "default": {
+        "jobs": [
+            {
+                "name": "cicd-azdevops-scala-notebook-test",
+                "new_cluster": {
+                    "spark_version": "7.3.x-scala2.12",
+                    "node_type_id": "Standard_D3_v2",
+                    "num_workers": 1
+                },
+                "libraries": [
+                  {
+                    "maven": {
+                      "coordinates": "MrPowers:spark-fast-tests:0.21.1-s_2.12"
+                    }
+                  }
+                ],
+                "email_notifications": {
+                    "on_start": [],
+                    "on_success": [],
+                    "on_failure": []
+                },
+                "max_retries": 0,
+                "notebook_task": {
+                    "notebook_path": "tests/TransformationsTest"
+                }
+            }
+        ]
+    }
+}
